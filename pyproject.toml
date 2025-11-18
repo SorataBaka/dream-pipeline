@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dream-pipeline"
+version = "0.1.0"
+description = "Private pipeline for BERT, TWONN, UMAP, and HDBSCAN research."
+requires-python = ">=3.8"
+dependencies = [
+    "hdbscan",
+    "umap-learn",
+    "scikit-learn",
+    "scikit-optimizer",
+    "scikit-dimension",
+    "numpy",
+    "scipy",
+    "scipy-stubs"
+    # Add any other required packages here
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
