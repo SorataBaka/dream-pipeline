@@ -307,7 +307,7 @@ class DreamCluster:
                 proportions = sizes / sizes.sum()
                 balance_entropy = entropy(proportions)
                 balance_entropy_normalized = balance_entropy / np.log(len(sizes))
-                gini_coeff = gini(sizes)
+                gini_coeff = DreamCluster.gini(sizes)
             except Exception as e:
                 print(f"Error computing balance scores: {e}")
         else:
