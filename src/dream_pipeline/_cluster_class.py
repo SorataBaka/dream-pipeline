@@ -72,7 +72,7 @@ class DreamCluster:
         reduced_embeddings = self.first_reductor.transform(embeddings)
         reduced_embeddings = self.second_reductor.transform(reduced_embeddings)
         labels, probabilities = approximate_predict(self.clusterer, reduced_embeddings)
-        return labels, probabilities
+        return labels, probabilities, reduced_embeddings
 
     def fit(self, embeddings: np.ndarray, seed=42):
         """
